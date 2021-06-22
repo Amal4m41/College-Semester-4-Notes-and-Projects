@@ -1,0 +1,33 @@
+Solar powered:
+-----------------
+Solar panel (size to be calculated w.r.t other components... eg generates 6-7 volts in full sun)
+Solar charger(converts the fluctuating current and voltage to a steady v and i for charging the battery)
+Battery(Lifepo4 rechargeable battery)
+Regulator(to stabilize the voltage)
+Microcontroller
+
+
+
+Face detection door lock:
+-----------------------------
+Esp32 cam board
+FTDI232 usb to serial interface board/ arduino uno => to upload the code to ESP32CAM board
+relay module
+12V power supply/battery
+12V solenoid lock
+7805 regulator(to get 5 volts)
+Capacitor
+breadboard and wires
+
+To activate a Light source by detecting darkness with LDR
+
+
+Voice assistant:
+---------------------
+NodeMCU board (microcontroller develpment board with wifi, to control the home appliances over the internet) 
+Relay module(to connect the home appliances with nodeMCU)
+Bulbs/leds
+Motors for fan
+S/W for voice assistant=>(google assistant->ifttt->blynk app)
+
+
