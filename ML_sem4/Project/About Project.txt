@@ -1,0 +1,6 @@
+This folder contains 4 files:
+
+letter-recognition.data -> The dataset the model is trained upon and tested
+LetterRecognitionClassification_SVM.ipynb -> Code in jupyter notebook using python
+LetterRecognitionClassification_SVM.html -> The html form of the jupyter notebook(to view the jupyter notebook version incase it's not installed on a device)
+LetterRecognitionClassification_SVM.py -> Code in python 

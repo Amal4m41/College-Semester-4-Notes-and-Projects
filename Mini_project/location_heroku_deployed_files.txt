@@ -1,0 +1,3 @@
+Heroku deployed file : 
+ChatbotCovid19 : C:\Users\Amal Sunil\Desktop\python_useful\covid19_chatbot_no_actionserver
+MlModelCovid19 : C:\Users\Amal Sunil\Desktop\Mini_project\covid19_ml_heroku

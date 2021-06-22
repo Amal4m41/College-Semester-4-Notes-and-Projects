@@ -1,0 +1,8 @@
+flow of bitcoin/blockchain working
+-mempool and miner
+-transaction validation and then block validation(mining the block/finding the nonce).
+-coinbase transaction
+-the chain of transaction.
+-eg block number :678491
+
+private and public key digital signature.

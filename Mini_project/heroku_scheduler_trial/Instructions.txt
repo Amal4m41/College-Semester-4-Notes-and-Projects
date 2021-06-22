@@ -1,0 +1,44 @@
+
+If you use free account [unverified*] on Heroku (so you cannot install addons), instead of using "Heroku scheduler", use time.sleep(n). You don't need Flask or any server in this case, just place script, say, inside folder Scripts (in default app/project by Heroku) and add to Procfile:
+worker: python script.py.
+Of course you replace script.py with Path to your script, including name,
+ex. worker: python Scripts/my_script.py
+Note: If your script uses third-party modules, say bs4 or requests, you need to install them in
+pipenv install MODULE_NAME or create requirements.txt and place it where manage.py, Procfile, Pipfile, (etc) are. Next place in that requirements.txt:
+requirements.txt:
+
+MODULE_NAME==MODULE_VERSION
+You can check them in pip freeze | grep MODULE_NAME
+Finally deploy to Heroku server using git and run following command:
+
+heroku ps:scale worker=1
+That's it! Bot/Script is running, check it in logs:
+
+heroku logs --tail
+
+
+
+Steps in detail:
+
+Create the needed files: eg:Scripts/code.py, requirements.txt, runtime.txt
+
+Commands to push local git repo to heroku remote:
+-git init
+-git add .
+-git commit -m "first commit"
+-heroku login
+-heroku create <name_app>(create a new empty application on Heroku.
+  If you run this command from your app’s root directory, the empty Heroku Git repository is automatically set as a remote for your local repository.)
+
+-git remote -v(to view the remote heroku app)
+-git push heroku master(deploying the code)
+
+to run the code.py for ever:
+-heroku ps:scale worker=1
+
+-heroku logs --tail(to view the logs)
+
+later when we need to kill the worker process : 
+-heroku scale worker=0
+
+
